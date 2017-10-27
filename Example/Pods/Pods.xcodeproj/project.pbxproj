@@ -54,7 +54,7 @@
 		44CBD0287531BF64D92DE7A505067BC6 /* NSString+C99ExtendedIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4266004FE6FF67F4D66949CF6C9BB /* NSString+C99ExtendedIdentifier.swift */; };
 		45F183320C688F9978649F30ABE21D09 /* MatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207D3C7C59BF086EAF25174E1C50ADD /* MatchError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		483FDA74FEC933E1A53FA25E794A0443 /* XCTestObservationCenter+CurrentTestCaseTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 00751A9CEE8D944E45765F6555627EA2 /* XCTestObservationCenter+CurrentTestCaseTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A659E4379F229601E1C04783A313246 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFBF692150EE40AD5E0CEB731704DEB /* Theme.swift */; };
+		4A659E4379F229601E1C04783A313246 /* ViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFBF692150EE40AD5E0CEB731704DEB /* ViewTheme.swift */; };
 		4CDACD8A5A6CFB688838AA988E7D1E43 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C8717D02D67103C76473513BF82D60 /* Nimble-dummy.m */; };
 		4D68C35510D1E911C9B89840FC4B777F /* mach_excServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D6CC8D8C6DBA7CFEE26E6B9ED36D1F3 /* mach_excServer.c */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		4FABBF5CA8F735F48035BE4144613CB7 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C4F64D68FF939E3A208305201592FB /* Expression.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -383,7 +383,7 @@
 		9AAC8A5D38DA9FC34DEBBD69970B9D5C /* HaveValidSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HaveValidSnapshot.swift; sourceTree = "<group>"; };
 		9C6D34DB3F888F42A55F36473BBE9B59 /* Pods_StyleGuide_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleGuide_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC780CFC1C6442101A74AA05ADC01EB /* Pods-StyleGuide_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StyleGuide_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9CFBF692150EE40AD5E0CEB731704DEB /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = StyleGuide/Classes/Theme.swift; sourceTree = "<group>"; };
+		9CFBF692150EE40AD5E0CEB731704DEB /* ViewTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewTheme.swift; path = StyleGuide/Classes/ViewTheme.swift; sourceTree = "<group>"; };
 		A16D5FDD780F23971EDCBBB3655C4A23 /* ErrorUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorUtility.swift; path = Sources/Quick/ErrorUtility.swift; sourceTree = "<group>"; };
 		A1929F984630339828436805A90591D3 /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
 		A1DEC436D6ADDFC135369A5774EE47D4 /* ExampleGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleGroup.swift; path = Sources/Quick/ExampleGroup.swift; sourceTree = "<group>"; };
@@ -542,7 +542,7 @@
 			isa = PBXGroup;
 			children = (
 				5169B7D41FA3637C0092C190 /* StyleGuide.swift */,
-				9CFBF692150EE40AD5E0CEB731704DEB /* Theme.swift */,
+				9CFBF692150EE40AD5E0CEB731704DEB /* ViewTheme.swift */,
 				5169B7D81FA3AF600092C190 /* TextTheme.swift */,
 				5169B7DA1FA3B0860092C190 /* ButtonTheme.swift */,
 				3BB21762B1C1848557225DDB4EDBC036 /* Extensions.swift */,
@@ -1301,7 +1301,7 @@
 				8F43A0E7C56B36FA2283C63606B4A74A /* StyleGuide-dummy.m in Sources */,
 				5169B7D91FA3AF600092C190 /* TextTheme.swift in Sources */,
 				5169B7D51FA3637C0092C190 /* StyleGuide.swift in Sources */,
-				4A659E4379F229601E1C04783A313246 /* Theme.swift in Sources */,
+				4A659E4379F229601E1C04783A313246 /* ViewTheme.swift in Sources */,
 				5169B7DB1FA3B0860092C190 /* ButtonTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

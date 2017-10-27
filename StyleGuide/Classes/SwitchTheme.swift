@@ -25,9 +25,14 @@ extension StyleGuide {
 extension UISwitch {
     override public func apply(theme: String) {
         if let values: StyleGuide.SwitchTheme = StyleGuide.shared.switchTheme[theme] {
-            self.tintColor = values.tintColor ?? self.tintColor
-            self.thumbTintColor = values.thumbTintColor ?? self.thumbTintColor
-            self.onTintColor = values.onTintColor ?? self.onTintColor
+            self.apply(switchThemeValues: values)
         }
+    }
+
+    public func apply(switchThemeValues values: StyleGuide.SwitchTheme) {
+        self.apply(viewThemeValues: values)
+
+        self.thumbTintColor = values.thumbTintColor ?? self.thumbTintColor
+        self.onTintColor = values.onTintColor ?? self.onTintColor
     }
 }

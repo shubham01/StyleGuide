@@ -10,50 +10,6 @@ import SwiftyJSON
 
 public class StyleGuide {
 
-    public struct Theme {
-        let backgroundColor: UIColor?
-        let textColor: UIColor?
-        let alternateTextColor: UIColor?
-        let textColorPressed: UIColor?
-        let textColorDisabled: UIColor?
-        let backgroundColorPressed: UIColor?
-        let backgroundColorDisabled: UIColor?
-        let borderColor: UIColor?
-        let onTintColor: UIColor?
-        let tintColor: UIColor?
-        let alternateTintColor: UIColor?
-        let thumbTintColor: UIColor?
-        let barTintColor: UIColor?
-        let font: UIFont?
-        let selectedFont: UIFont?
-        let borderWidth: CGFloat?
-        let cornerRadius: CGFloat?
-        let hideBottomLine: Bool
-        let separatorColor: UIColor?
-
-        init(from json: JSON) {
-            backgroundColor = StyleGuide.parseColor(hexString: json["backgroundColor"].string)
-            textColor = StyleGuide.parseColor(hexString: json["textColor"].string)
-            textColorPressed = StyleGuide.parseColor(hexString: json["textColorPressed"].string)
-            textColorDisabled = StyleGuide.parseColor(hexString: json["textColorDisabled"].string)
-            alternateTextColor = StyleGuide.parseColor(hexString: json["alternateTextColor"].string)
-            font = StyleGuide.parseFont(from: json["font"].string)
-            selectedFont = StyleGuide.parseFont(from: json["selectedFont"].string)
-            borderColor = StyleGuide.parseColor(hexString: json["borderColor"].string)
-            borderWidth = StyleGuide.parseFloat(from: json["borderWidth"].int)
-            cornerRadius = StyleGuide.parseFloat(from: json["cornerRadius"].int)
-            onTintColor = StyleGuide.parseColor(hexString: json["onTintColor"].string)
-            tintColor = StyleGuide.parseColor(hexString: json["tintColor"].string)
-            thumbTintColor = StyleGuide.parseColor(hexString: json["thumbTintColor"].string)
-            alternateTintColor = StyleGuide.parseColor(hexString: json["alternateTintColor"].string)
-            backgroundColorPressed = StyleGuide.parseColor(hexString: json["backgroundColorPressed"].string)
-            backgroundColorDisabled = StyleGuide.parseColor(hexString: json["backgroundColorDisabled"].string)
-            barTintColor = StyleGuide.parseColor(hexString: json["barTintColor"].string)
-            hideBottomLine = json["hideBottomLine"].boolValue
-            separatorColor = StyleGuide.parseColor(hexString: json["seperatorColor"].string)
-        }
-    }
-
     public static let shared: StyleGuide = StyleGuide()
 
     /// Theme file name. Set before calling initialize()
@@ -68,21 +24,20 @@ public class StyleGuide {
     public var textTheme: [String: TextTheme] = [:]
     public var buttonTheme: [String: ButtonTheme] = [:]
     public var switchTheme: [String: SwitchTheme] = [:]
-
-    public var segmentedControlTheme: [String: Theme] = [:]
-    public var sliderTheme: [String: Theme] = [:]
-    public var activityIndicatorTheme: [String: Theme] = [:]
-    public var progressViewTheme: [String: Theme] = [:]
-    public var navigationBarTheme: [String: Theme] = [:]
-    public var refreshControlTheme: [String: Theme] = [:]
-    public var applicationTheme: [String: Theme] = [:]
-    public var imageViewTheme: [String: Theme] = [:]
-    public var toolBarTheme: [String: Theme] = [:]
-    public var tableViewTheme: [String: Theme] = [:]
-    public var barButtonTheme: [String: Theme] = [:]
-    public var searchBarTheme: [String: Theme] = [:]
-    public var tabBarTheme: [String: Theme] = [:]
-    public var tableHeaderFooterTheme: [String: Theme] = [:]
+    public var segmentedControlTheme: [String: SegmentedControlTheme] = [:]
+    public var sliderTheme: [String: SliderTheme] = [:]
+    public var activityIndicatorTheme: [String: ActivityIndicatorTheme] = [:]
+    public var progressViewTheme: [String: ProgressViewTheme] = [:]
+    public var navigationBarTheme: [String: NavigationBarTheme] = [:]
+    public var refreshControlTheme: [String: RefreshControlTheme] = [:]
+    public var applicationTheme: [String: ApplicationTheme] = [:]
+    public var imageViewTheme: [String: ImageViewTheme] = [:]
+    public var toolBarTheme: [String: ToolBarTheme] = [:]
+    public var tableViewTheme: [String: TableViewTheme] = [:]
+    public var barButtonTheme: [String: BarButtonTheme] = [:]
+    public var searchBarTheme: [String: SearchBarTheme] = [:]
+    public var tabBarTheme: [String: TabBarTheme] = [:]
+    public var tableHeaderFooterTheme: [String: TableHeaderFooterTheme] = [:]
 
     public var primaryColor: UIColor?
     public var accentColor: UIColor?
@@ -148,46 +103,46 @@ public class StyleGuide {
                 switchTheme[key] = SwitchTheme(fromJSON: value)
             })
             json["segmentedControl"].dictionary?.forEach({ (key: String, value: JSON) in
-                segmentedControlTheme[key] = Theme(from: value)
+                segmentedControlTheme[key] = SegmentedControlTheme(fromJSON: value)
             })
             json["slider"].dictionary?.forEach({ (key: String, value: JSON) in
-                sliderTheme[key] = Theme(from: value)
+                sliderTheme[key] = SliderTheme(fromJSON: value)
             })
             json["activityIndicator"].dictionary?.forEach({ (key: String, value: JSON) in
-                activityIndicatorTheme[key] = Theme(from: value)
+                activityIndicatorTheme[key] = ActivityIndicatorTheme(fromJSON: value)
             })
             json["progressView"].dictionary?.forEach({ (key: String, value: JSON) in
-                progressViewTheme[key] = Theme(from: value)
+                progressViewTheme[key] = ProgressViewTheme(fromJSON: value)
             })
             json["navigationBar"].dictionary?.forEach({ (key: String, value: JSON) in
-                navigationBarTheme[key] = Theme(from: value)
+                navigationBarTheme[key] = NavigationBarTheme(fromJSON: value)
             })
             json["refreshControl"].dictionary?.forEach({ (key: String, value: JSON) in
-                refreshControlTheme[key] = Theme(from: value)
+                refreshControlTheme[key] = RefreshControlTheme(fromJSON: value)
             })
             json["application"].dictionary?.forEach({ (key: String, value: JSON) in
-                applicationTheme[key] = Theme(from: value)
+                applicationTheme[key] = ApplicationTheme(fromJSON: value)
             })
             json ["imageView"].dictionary?.forEach({ (key: String, value: JSON) in
-                imageViewTheme[key] = Theme(from: value)
+                imageViewTheme[key] = ImageViewTheme(fromJSON: value)
             })
             json["toolbar"].dictionary?.forEach({ (key: String, value: JSON) in
-                toolBarTheme[key] = Theme(from: value)
+                toolBarTheme[key] = ToolBarTheme(fromJSON: value)
             })
             json["tableview"].dictionary?.forEach({ (key: String, value: JSON) in
-                tableViewTheme[key] = Theme(from: value)
+                tableViewTheme[key] = TableViewTheme(fromJSON: value)
             })
             json["barButton"].dictionary?.forEach({ (key: String, value: JSON) in
-                barButtonTheme[key] = Theme(from: value)
+                barButtonTheme[key] = BarButtonTheme(fromJSON: value)
             })
             json["searchBar"].dictionary?.forEach({ (key: String, value: JSON) in
-                searchBarTheme[key] = Theme(from: value)
+                searchBarTheme[key] = SearchBarTheme(fromJSON: value)
             })
             json["tabBar"].dictionary?.forEach({ (key: String, value: JSON) in
-                tabBarTheme[key] = Theme(from: value)
+                tabBarTheme[key] = TabBarTheme(fromJSON: value)
             })
             json["tableHeaderFooter"].dictionary?.forEach({ (key: String, value: JSON) in
-                tableHeaderFooterTheme[key] = Theme(from: value)
+                tableHeaderFooterTheme[key] = TableHeaderFooterTheme(fromJSON: value)
             })
 
             //Load custom view
@@ -241,7 +196,7 @@ public class StyleGuide {
             windowObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIWindowDidBecomeVisible,
                                                                     object: nil, queue: nil, using: { (notification) in
                                                                         if let window = notification.object as? UIWindow {
-                                                                            if let values: Theme = self.applicationTheme[StyleGuide.defaultThemeKey] {
+                                                                            if let values: ApplicationTheme = self.applicationTheme[StyleGuide.defaultThemeKey] {
                                                                                 window.tintColor = values.tintColor ?? window.tintColor
                                                                             }
                                                                         }

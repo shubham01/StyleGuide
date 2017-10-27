@@ -6,7 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,18 +24,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhZ-Bf-fiV">
-                                <rect key="frame" x="16" y="20" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xy5-cE-tg3">
+                                <rect key="frame" x="16" y="40" width="150" height="64"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xy5-cE-tg3" secondAttribute="height" multiplier="7:3" id="wCf-q4-AiM"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="themeStyle" value="solidBlue"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeStyle" value="roundBlue"/>
                                 </userDefinedRuntimeAttributes>
-                            </button>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="roundBlue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCu-qs-Em2">
+                                <rect key="frame" x="52" y="112" width="78.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WhZ-Bf-fiV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="NhS-2i-scV"/>
-                            <constraint firstItem="WhZ-Bf-fiV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="rlV-zY-coJ"/>
+                            <constraint firstItem="aCu-qs-Em2" firstAttribute="top" secondItem="Xy5-cE-tg3" secondAttribute="bottom" constant="8" id="J03-bE-qeh"/>
+                            <constraint firstItem="aCu-qs-Em2" firstAttribute="centerX" secondItem="Xy5-cE-tg3" secondAttribute="centerX" id="M9Q-kv-kRy"/>
+                            <constraint firstItem="Xy5-cE-tg3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="MJe-H2-E4o"/>
+                            <constraint firstItem="Xy5-cE-tg3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="cmd-OM-5Wz"/>
+                            <constraint firstItem="Xy5-cE-tg3" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.4" id="iKW-V2-SNP"/>
                         </constraints>
                     </view>
                 </viewController>

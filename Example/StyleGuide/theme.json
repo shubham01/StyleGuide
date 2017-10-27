@@ -1,8 +1,17 @@
 {
-	"button": {
-		"solidBlue": {
-			"textColor": "#ffffff",
-			"backgroundColor": "#02B7E0"
-		}
-	}
+    "view": {
+        "roundBlue": {
+            "backgroundColor": "#12B7E0",
+            "cornerRadius": 5,
+            "borderWidth": 2,
+            "borderColor": "#92B7E0"
+        }
+    },
+
+    "button": {
+        "solidBlue": {
+            "textColor": "#ffffff",
+            "backgroundColor": "#12B7E0"
+        }
+    }
 }

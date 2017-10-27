@@ -1,0 +1,22 @@
+{
+  "name": "StyleGuide",
+  "version": "0.1.0",
+  "summary": "A short description of StyleGuide.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/shubham01/StyleGuide",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "shubham01": "shubham.agr001@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/shubham01/StyleGuide.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "StyleGuide/Classes/**/*"
+}

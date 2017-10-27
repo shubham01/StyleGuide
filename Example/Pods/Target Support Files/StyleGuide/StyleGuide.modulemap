@@ -1,0 +1,6 @@
+framework module StyleGuide {
+  umbrella header "StyleGuide-umbrella.h"
+
+  export *
+  module * { export * }
+}

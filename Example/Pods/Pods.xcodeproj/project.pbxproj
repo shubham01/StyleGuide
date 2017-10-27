@@ -63,6 +63,7 @@
 		50EEB30BED91D8E6C6C384721894C3E8 /* ErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D5FDD780F23971EDCBBB3655C4A23 /* ErrorUtility.swift */; };
 		5169B7D51FA3637C0092C190 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B7D41FA3637C0092C190 /* StyleGuide.swift */; };
 		5169B7D91FA3AF600092C190 /* TextTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B7D81FA3AF600092C190 /* TextTheme.swift */; };
+		5169B7DB1FA3B0860092C190 /* ButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B7DA1FA3B0860092C190 /* ButtonTheme.swift */; };
 		531C54B1C10BA0F17A2B7D81D02BD390 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 660B3873A5CA70D1E5D0D07795E54883 /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54CC2049C937561A469575AF9E6A6FE9 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148531ED579D81EBC090D98393D065F2 /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		57DCAEF2887AF704DB8C042224AD3AC5 /* Pods-StyleGuide_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 591AB1D857E7EF369A44FFFD133E3881 /* Pods-StyleGuide_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -322,6 +323,7 @@
 		514FE45E1E4393C537DBAE135796964D /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
 		5169B7D41FA3637C0092C190 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StyleGuide.swift; path = StyleGuide/Classes/StyleGuide.swift; sourceTree = "<group>"; };
 		5169B7D81FA3AF600092C190 /* TextTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextTheme.swift; path = StyleGuide/Classes/TextTheme.swift; sourceTree = "<group>"; };
+		5169B7DA1FA3B0860092C190 /* ButtonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonTheme.swift; path = StyleGuide/Classes/ButtonTheme.swift; sourceTree = "<group>"; };
 		54853A74EB644A97B47FFC4C9FA62D3B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54E4115E83E0AB5EF59F52B219E848E3 /* CwlPreconditionTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlPreconditionTesting.h; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h; sourceTree = "<group>"; };
 		550FD31501B5B499C497B70AB881D4D4 /* NMBStringify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBStringify.m; path = Sources/NimbleObjectiveC/NMBStringify.m; sourceTree = "<group>"; };
@@ -541,9 +543,10 @@
 			children = (
 				5169B7D41FA3637C0092C190 /* StyleGuide.swift */,
 				9CFBF692150EE40AD5E0CEB731704DEB /* Theme.swift */,
+				5169B7D81FA3AF600092C190 /* TextTheme.swift */,
+				5169B7DA1FA3B0860092C190 /* ButtonTheme.swift */,
 				3BB21762B1C1848557225DDB4EDBC036 /* Extensions.swift */,
 				DD650F7EF1F94D98F0D14B875D34E656 /* Support Files */,
-				5169B7D81FA3AF600092C190 /* TextTheme.swift */,
 			);
 			name = StyleGuide;
 			path = ../..;
@@ -1299,6 +1302,7 @@
 				5169B7D91FA3AF600092C190 /* TextTheme.swift in Sources */,
 				5169B7D51FA3637C0092C190 /* StyleGuide.swift in Sources */,
 				4A659E4379F229601E1C04783A313246 /* Theme.swift in Sources */,
+				5169B7DB1FA3B0860092C190 /* ButtonTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

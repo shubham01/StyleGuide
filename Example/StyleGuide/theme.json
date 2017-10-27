@@ -8,6 +8,13 @@
         }
     },
 
+    "text": {
+        "caption": {
+            "textColor": "#444444",
+            "font": "13"
+        }
+    },
+
     "button": {
         "solidBlue": {
             "textColor": "#ffffff",

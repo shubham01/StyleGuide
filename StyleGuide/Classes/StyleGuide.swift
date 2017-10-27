@@ -95,7 +95,7 @@ public class StyleGuide {
     public static let defaultThemeKey: String = "default"
 
     public var viewTheme: [String: ViewTheme] = [:]
-    public var textTheme: [String: Theme] = [:]
+    public var textTheme: [String: TextTheme] = [:]
     public var buttonTheme: [String: Theme] = [:]
     public var switchTheme: [String: Theme] = [:]
     public var segmentedControlTheme: [String: Theme] = [:]
@@ -165,7 +165,7 @@ public class StyleGuide {
             let json: JSON = JSON(data: jsonData)
 
             json["text"].dictionary?.forEach({ (key: String, value: JSON) in
-                textTheme[key] = Theme(from: value)
+                textTheme[key] = TextTheme(fromJSON: value)
             })
             json["button"].dictionary?.forEach({ (key: String, value: JSON) in
                 buttonTheme[key] = Theme(from: value)

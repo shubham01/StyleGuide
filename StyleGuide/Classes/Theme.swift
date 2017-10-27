@@ -12,13 +12,24 @@ import SwiftyJSON
 extension UIView {
     @objc public func apply(theme: String) {
         if let values: StyleGuide.ViewTheme = StyleGuide.shared.viewTheme[theme] {
-            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
-            self.viewBorderWidth = values.borderWidth ?? self.viewBorderWidth
-            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
-            self.viewBorderColor = values.borderColor ?? self.viewBorderColor
-            self.tintColor = values.tintColor ?? self.tintColor
+            self.apply(viewThemeValues: values)
+
+//            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
+//            self.viewBorderWidth = values.borderWidth ?? self.viewBorderWidth
+//            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
+//            self.viewBorderColor = values.borderColor ?? self.viewBorderColor
+//            self.tintColor = values.tintColor ?? self.tintColor
         }
     }
+
+    public func apply(viewThemeValues values: StyleGuide.ViewTheme) {
+        self.backgroundColor = values.backgroundColor ?? self.backgroundColor
+        self.viewBorderWidth = values.borderWidth ?? self.viewBorderWidth
+        self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
+        self.viewBorderColor = values.borderColor ?? self.viewBorderColor
+        self.tintColor = values.tintColor ?? self.tintColor
+    }
+
     @IBInspectable public var themeStyle: String {
         get {
             return ""
@@ -32,12 +43,21 @@ extension UIView {
 extension UILabel {
 
     public override func apply(theme: String) {
-        if let values: StyleGuide.Theme = StyleGuide.shared.textTheme[theme] {
-            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
-            self.textColor = values.textColor ?? self.textColor
-            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
-            self.font = values.font ?? self.font
+        if let values: StyleGuide.TextTheme = StyleGuide.shared.textTheme[theme] {
+//            self.apply(viewThemeValues: values)
+//
+//            self.textColor = values.textColor ?? self.textColor
+//            self.font = values.font ?? self.font
+
+            self.apply(textThemeValues: values)
         }
+    }
+
+    public func apply(textThemeValues values: StyleGuide.TextTheme) {
+        self.apply(viewThemeValues: values)
+
+        self.textColor = values.textColor ?? self.textColor
+        self.font = values.font ?? self.font
     }
 }
 
@@ -117,13 +137,22 @@ extension UISegmentedControl {
 
 extension UITextView {
     override public func apply(theme: String) {
-        if let values: StyleGuide.Theme = StyleGuide.shared.textTheme[theme] {
-            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
-            self.textColor = values.textColor ?? self.textColor
-            self.tintColor = values.tintColor ?? self.tintColor
-            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
-            self.font = values.font ?? self.font
+        if let values: StyleGuide.TextTheme = StyleGuide.shared.textTheme[theme] {
+//            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
+//            self.textColor = values.textColor ?? self.textColor
+//            self.tintColor = values.tintColor ?? self.tintColor
+//            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
+//            self.font = values.font ?? self.font
+
+            self.apply(textThemeValues: values)
         }
+    }
+
+    public func apply(textThemeValues values: StyleGuide.TextTheme) {
+        self.apply(viewThemeValues: values)
+
+        self.font = values.font ?? self.font
+        self.textColor = values.textColor ?? self.textColor
     }
 }
 
@@ -166,12 +195,21 @@ extension UIProgressView {
 
 extension UITextField {
     override public func apply(theme: String) {
-        if let values: StyleGuide.Theme = StyleGuide.shared.textTheme[theme] {
-            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
-            self.textColor = values.textColor ?? self.textColor
-            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
-            self.font = values.font ?? self.font
+        if let values: StyleGuide.TextTheme = StyleGuide.shared.textTheme[theme] {
+//            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
+//            self.textColor = values.textColor ?? self.textColor
+//            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
+//            self.font = values.font ?? self.font
+
+            self.apply(textThemeValues: values)
         }
+    }
+
+    public func apply(textThemeValues values: StyleGuide.TextTheme) {
+        self.apply(viewThemeValues: values)
+
+        self.textColor = values.textColor ?? self.textColor
+        self.font = values.font ?? self.font
     }
 }
 

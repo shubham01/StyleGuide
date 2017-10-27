@@ -9,6 +9,24 @@ import Foundation
 
 import SwiftyJSON
 
+extension StyleGuide {
+    public class ViewTheme {
+        let backgroundColor: UIColor?
+        let borderWidth: CGFloat?
+        let borderColor: UIColor?
+        let cornerRadius: CGFloat?
+        let tintColor: UIColor?
+
+        init(fromJSON json: JSON) {
+            self.backgroundColor = StyleGuide.parseColor(hexString: json["backgroundColor"].string)
+            self.borderWidth = StyleGuide.parseFloat(from: json["borderWidth"].int)
+            self.cornerRadius = StyleGuide.parseFloat(from: json["cornerRadius"].int)
+            self.tintColor = StyleGuide.parseColor(hexString: json["tintColor"].string)
+            self.borderColor = StyleGuide.parseColor(hexString: json["borderColor"].string)
+        }
+    }
+}
+
 extension UIView {
     @objc public func apply(theme: String) {
         if let values: StyleGuide.ViewTheme = StyleGuide.shared.viewTheme[theme] {

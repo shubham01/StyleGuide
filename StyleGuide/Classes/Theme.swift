@@ -13,12 +13,6 @@ extension UIView {
     @objc public func apply(theme: String) {
         if let values: StyleGuide.ViewTheme = StyleGuide.shared.viewTheme[theme] {
             self.apply(viewThemeValues: values)
-
-//            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
-//            self.viewBorderWidth = values.borderWidth ?? self.viewBorderWidth
-//            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
-//            self.viewBorderColor = values.borderColor ?? self.viewBorderColor
-//            self.tintColor = values.tintColor ?? self.tintColor
         }
     }
 
@@ -44,11 +38,6 @@ extension UILabel {
 
     public override func apply(theme: String) {
         if let values: StyleGuide.TextTheme = StyleGuide.shared.textTheme[theme] {
-//            self.apply(viewThemeValues: values)
-//
-//            self.textColor = values.textColor ?? self.textColor
-//            self.font = values.font ?? self.font
-
             self.apply(textThemeValues: values)
         }
     }
@@ -64,34 +53,6 @@ extension UILabel {
 extension UIButton {
     override public func apply(theme: String) {
         if let values: StyleGuide.ButtonTheme = StyleGuide.shared.buttonTheme[theme] {
-//            self.viewBorderColor = values.borderColor ?? self.viewBorderColor
-//            self.viewBorderWidth = values.borderWidth ?? self.viewBorderWidth
-//            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
-//            self.titleLabel?.font = values.font ?? self.titleLabel?.font
-//            self.backgroundColor = UIColor.clear
-//            if let textColor = values.textColor {
-//                self.setTitleColor(textColor, for: .normal)
-//                if let image = self.currentImage, image.renderingMode != .alwaysTemplate {
-//                    self.setImage(image.withRenderingMode(.alwaysTemplate), for: .normal)
-//                }
-//                self.tintColor = textColor
-//            }
-//            if let textColorPressed = values.textColorPressed {
-//                self.setTitleColor(textColorPressed, for: .highlighted)
-//            }
-//            if let textColorDisabled = values.textColorDisabled {
-//                self.setTitleColor(textColorDisabled, for: .disabled)
-//            }
-//            if let backgroundColor = values.backgroundColor {
-//                self.setBackgroundColor(color: backgroundColor, for: .normal)
-//            }
-//            if let backgroundColorPressed = values.backgroundColorPressed {
-//                self.setBackgroundColor(color: backgroundColorPressed, for: .highlighted)
-//            }
-//            if let backgroundColorDisabled = values.backgroundColorDisabled {
-//                self.setBackgroundColor(color: backgroundColorDisabled, for: .disabled)
-//            }
-
             self.apply(buttonThemeValues: values)
         }
     }
@@ -169,12 +130,6 @@ extension UISegmentedControl {
 extension UITextView {
     override public func apply(theme: String) {
         if let values: StyleGuide.TextTheme = StyleGuide.shared.textTheme[theme] {
-//            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
-//            self.textColor = values.textColor ?? self.textColor
-//            self.tintColor = values.tintColor ?? self.tintColor
-//            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
-//            self.font = values.font ?? self.font
-
             self.apply(textThemeValues: values)
         }
     }
@@ -227,10 +182,6 @@ extension UIProgressView {
 extension UITextField {
     override public func apply(theme: String) {
         if let values: StyleGuide.TextTheme = StyleGuide.shared.textTheme[theme] {
-//            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
-//            self.textColor = values.textColor ?? self.textColor
-//            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
-//            self.font = values.font ?? self.font
 
             self.apply(textThemeValues: values)
         }

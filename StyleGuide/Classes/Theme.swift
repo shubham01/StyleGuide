@@ -63,34 +63,65 @@ extension UILabel {
 
 extension UIButton {
     override public func apply(theme: String) {
-        if let values: StyleGuide.Theme = StyleGuide.shared.buttonTheme[theme] {
-            self.viewBorderColor = values.borderColor ?? self.viewBorderColor
-            self.viewBorderWidth = values.borderWidth ?? self.viewBorderWidth
-            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
-            self.titleLabel?.font = values.font ?? self.titleLabel?.font
-            self.backgroundColor = UIColor.clear
-            if let textColor = values.textColor {
-                self.setTitleColor(textColor, for: .normal)
-                if let image = self.currentImage, image.renderingMode != .alwaysTemplate {
-                    self.setImage(image.withRenderingMode(.alwaysTemplate), for: .normal)
-                }
-                self.tintColor = textColor
+        if let values: StyleGuide.ButtonTheme = StyleGuide.shared.buttonTheme[theme] {
+//            self.viewBorderColor = values.borderColor ?? self.viewBorderColor
+//            self.viewBorderWidth = values.borderWidth ?? self.viewBorderWidth
+//            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
+//            self.titleLabel?.font = values.font ?? self.titleLabel?.font
+//            self.backgroundColor = UIColor.clear
+//            if let textColor = values.textColor {
+//                self.setTitleColor(textColor, for: .normal)
+//                if let image = self.currentImage, image.renderingMode != .alwaysTemplate {
+//                    self.setImage(image.withRenderingMode(.alwaysTemplate), for: .normal)
+//                }
+//                self.tintColor = textColor
+//            }
+//            if let textColorPressed = values.textColorPressed {
+//                self.setTitleColor(textColorPressed, for: .highlighted)
+//            }
+//            if let textColorDisabled = values.textColorDisabled {
+//                self.setTitleColor(textColorDisabled, for: .disabled)
+//            }
+//            if let backgroundColor = values.backgroundColor {
+//                self.setBackgroundColor(color: backgroundColor, for: .normal)
+//            }
+//            if let backgroundColorPressed = values.backgroundColorPressed {
+//                self.setBackgroundColor(color: backgroundColorPressed, for: .highlighted)
+//            }
+//            if let backgroundColorDisabled = values.backgroundColorDisabled {
+//                self.setBackgroundColor(color: backgroundColorDisabled, for: .disabled)
+//            }
+
+            self.apply(buttonThemeValues: values)
+        }
+    }
+
+    public func apply(buttonThemeValues values: StyleGuide.ButtonTheme) {
+        self.apply(viewThemeValues: values)
+
+        self.titleLabel?.font = values.font ?? self.titleLabel?.font
+        self.backgroundColor = UIColor.clear
+        if let textColor = values.textColor {
+            self.setTitleColor(textColor, for: .normal)
+            if let image = self.currentImage, image.renderingMode != .alwaysTemplate {
+                self.setImage(image.withRenderingMode(.alwaysTemplate), for: .normal)
             }
-            if let textColorPressed = values.textColorPressed {
-                self.setTitleColor(textColorPressed, for: .highlighted)
-            }
-            if let textColorDisabled = values.textColorDisabled {
-                self.setTitleColor(textColorDisabled, for: .disabled)
-            }
-            if let backgroundColor = values.backgroundColor {
-                self.setBackgroundColor(color: backgroundColor, for: .normal)
-            }
-            if let backgroundColorPressed = values.backgroundColorPressed {
-                self.setBackgroundColor(color: backgroundColorPressed, for: .highlighted)
-            }
-            if let backgroundColorDisabled = values.backgroundColorDisabled {
-                self.setBackgroundColor(color: backgroundColorDisabled, for: .disabled)
-            }
+            self.tintColor = textColor
+        }
+        if let textColorPressed = values.textColorPressed {
+            self.setTitleColor(textColorPressed, for: .highlighted)
+        }
+        if let textColorDisabled = values.textColorDisabled {
+            self.setTitleColor(textColorDisabled, for: .disabled)
+        }
+        if let backgroundColor = values.backgroundColor {
+            self.setBackgroundColor(color: backgroundColor, for: .normal)
+        }
+        if let backgroundColorPressed = values.backgroundColorPressed {
+            self.setBackgroundColor(color: backgroundColorPressed, for: .highlighted)
+        }
+        if let backgroundColorDisabled = values.backgroundColorDisabled {
+            self.setBackgroundColor(color: backgroundColorDisabled, for: .disabled)
         }
     }
 

@@ -10,7 +10,7 @@
 
     "text": {
         "caption": {
-            "textColor": "#444444",
+            "textColor": "#565656",
             "font": "13"
         }
     },
@@ -18,7 +18,11 @@
     "button": {
         "solidBlue": {
             "textColor": "#ffffff",
-            "backgroundColor": "#12B7E0"
+            "backgroundColor": "#52B7E0",
+            "borderColor": "#12B7E0",
+            "cornerRadius": 10,
+            "borderWidth": 4,
+            "backgroundColorPressed": "#8052B7E0"
         }
     }
 }

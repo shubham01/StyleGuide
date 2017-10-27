@@ -40,6 +40,27 @@ public class StyleGuide {
         }
     }
 
+    public class ButtonTheme: ViewTheme {
+
+        let textColor: UIColor?
+        let textColorPressed: UIColor?
+        let textColorDisabled: UIColor?
+        let backgroundColorPressed: UIColor?
+        let backgroundColorDisabled: UIColor?
+        let font: UIFont?
+
+        override init(fromJSON json: JSON) {
+            self.textColor = StyleGuide.parseColor(hexString: json["textColor"].string)
+            self.textColorPressed = StyleGuide.parseColor(hexString: json["textColorPressed"].string)
+            self.textColorDisabled = StyleGuide.parseColor(hexString: json["textColorDisabled"].string)
+            self.font = StyleGuide.parseFont(from: json["font"].string)
+            backgroundColorPressed = StyleGuide.parseColor(hexString: json["backgroundColorPressed"].string)
+            backgroundColorDisabled = StyleGuide.parseColor(hexString: json["backgroundColorDisabled"].string)
+
+            super.init(fromJSON: json)
+        }
+    }
+
     public struct Theme {
         let backgroundColor: UIColor?
         let textColor: UIColor?
@@ -96,7 +117,7 @@ public class StyleGuide {
 
     public var viewTheme: [String: ViewTheme] = [:]
     public var textTheme: [String: TextTheme] = [:]
-    public var buttonTheme: [String: Theme] = [:]
+    public var buttonTheme: [String: ButtonTheme] = [:]
     public var switchTheme: [String: Theme] = [:]
     public var segmentedControlTheme: [String: Theme] = [:]
     public var sliderTheme: [String: Theme] = [:]
@@ -168,7 +189,7 @@ public class StyleGuide {
                 textTheme[key] = TextTheme(fromJSON: value)
             })
             json["button"].dictionary?.forEach({ (key: String, value: JSON) in
-                buttonTheme[key] = Theme(from: value)
+                buttonTheme[key] = ButtonTheme(fromJSON: value)
             })
             json["view"].dictionary?.forEach({ (key: String, value: JSON) in
                 viewTheme[key] = ViewTheme(fromJSON: value)

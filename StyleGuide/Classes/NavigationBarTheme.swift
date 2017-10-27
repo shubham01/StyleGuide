@@ -30,8 +30,11 @@ extension StyleGuide {
 extension UINavigationBar {
     override public func apply(theme: String) {
         if let values: StyleGuide.NavigationBarTheme = StyleGuide.shared.navigationBarTheme[theme] {
-            self.barTintColor = values.barTintColor ?? self.barTintColor
-            self.tintColor = values.tintColor ?? self.tintColor
+            self.apply(viewThemeValues: values)
+
+            self.backgroundColor = nil
+            self.barTintColor = values.backgroundColor ?? self.barTintColor
+
             if values.hideBottomLine == true {
                 self.setBackgroundImage(UIImage(), for: .default)
                 self.shadowImage = UIImage()

@@ -51,19 +51,3 @@ extension UIView {
         }
     }
 }
-
-extension UIRefreshControl {
-    override public func apply(theme: String) {
-        if let values: StyleGuide.RefreshControlTheme = StyleGuide.shared.refreshControlTheme[theme] {
-            self.tintColor = values.tintColor
-        }
-    }
-}
-
-extension UIToolbar {
-    override public func apply(theme: String) {
-        if let values = StyleGuide.shared.toolBarTheme[theme] {
-            self.tintColor = values.tintColor ?? self.tintColor
-        }
-    }
-}

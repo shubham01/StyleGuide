@@ -20,6 +20,8 @@ extension StyleGuide {
 extension UIImageView {
     override public func apply(theme: String) {
         if let values: StyleGuide.ImageViewTheme = StyleGuide.shared.imageViewTheme[theme] {
+            self.apply(viewThemeValues: values)
+
             if let color = values.tintColor {
                 if let image = self.image, image.renderingMode != .alwaysTemplate {
                     self.image = image.withRenderingMode(.alwaysTemplate)

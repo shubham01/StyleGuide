@@ -22,8 +22,10 @@ extension StyleGuide {
 extension UITabBar {
     override public func apply(theme: String) {
         if let values: StyleGuide.TabBarTheme = StyleGuide.shared.tabBarTheme[theme] {
+
+            self.apply(viewThemeValues: values)
+
             self.barTintColor = values.backgroundColor ?? self.barTintColor
-            self.tintColor = values.tintColor ?? self.tintColor
         }
     }
 }

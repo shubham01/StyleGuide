@@ -16,3 +16,11 @@ extension StyleGuide {
         }
     }
 }
+
+extension UIRefreshControl {
+    override public func apply(theme: String) {
+        if let values: StyleGuide.RefreshControlTheme = StyleGuide.shared.refreshControlTheme[theme] {
+            self.tintColor = values.tintColor
+        }
+    }
+}

@@ -90,6 +90,21 @@ public class StyleGuide {
 
             let json: JSON = JSON(data: jsonData)
 
+            if let colors: JSON = json["colors"] {
+                accentColor = StyleGuide.parseColor(hexString: colors["accent"].string)
+                primaryColor = StyleGuide.parseColor(hexString: colors["primary"].string)
+                secondaryColor = StyleGuide.parseColor(hexString: colors["secondary"].string)
+                messageColor = StyleGuide.parseColor(hexString: colors["message"].string)
+                backgroundColor = StyleGuide.parseColor(hexString: colors["background"].string)
+                successColor = StyleGuide.parseColor(hexString: colors["success"].string)
+                errorColor = StyleGuide.parseColor(hexString: colors["error"].string)
+                warningColor = StyleGuide.parseColor(hexString: colors["warning"].string)
+                primaryTextColor = StyleGuide.parseColor(hexString: colors["primaryText"].string)
+                secondaryTextColor = StyleGuide.parseColor(hexString: colors["secondaryText"].string)
+                disabledTextColor = StyleGuide.parseColor(hexString: colors["disabledText"].string)
+                reachGraphColor = StyleGuide.parseColor(hexString: colors["reachGraphColor"].string)
+            }
+
             json["text"].dictionary?.forEach({ (key: String, value: JSON) in
                 textTheme[key] = TextTheme(fromJSON: value)
             })
@@ -126,10 +141,10 @@ public class StyleGuide {
             json ["imageView"].dictionary?.forEach({ (key: String, value: JSON) in
                 imageViewTheme[key] = ImageViewTheme(fromJSON: value)
             })
-            json["toolbar"].dictionary?.forEach({ (key: String, value: JSON) in
+            json["toolBar"].dictionary?.forEach({ (key: String, value: JSON) in
                 toolBarTheme[key] = ToolBarTheme(fromJSON: value)
             })
-            json["tableview"].dictionary?.forEach({ (key: String, value: JSON) in
+            json["tableView"].dictionary?.forEach({ (key: String, value: JSON) in
                 tableViewTheme[key] = TableViewTheme(fromJSON: value)
             })
             json["barButton"].dictionary?.forEach({ (key: String, value: JSON) in
@@ -148,23 +163,8 @@ public class StyleGuide {
             //Load custom view
             customViews.forEach { (viewKey: String, tuple: CustomViewTuple) in
                 json[viewKey].dictionary?.forEach { (key: String, value: JSON) in
-                    tuple.viewType.themeDict[key] = tuple.valuesType.initialize(from: value)
+                    tuple.viewType.themeDict[key] = tuple.valuesType.initialize(fromJSON: value)
                 }
-            }
-
-            if let colors: JSON = json["colors"] {
-                accentColor = StyleGuide.parseColor(hexString: colors["accent"].string)
-                primaryColor = StyleGuide.parseColor(hexString: colors["primary"].string)
-                secondaryColor = StyleGuide.parseColor(hexString: colors["secondary"].string)
-                messageColor = StyleGuide.parseColor(hexString: colors["message"].string)
-                backgroundColor = StyleGuide.parseColor(hexString: colors["background"].string)
-                successColor = StyleGuide.parseColor(hexString: colors["success"].string)
-                errorColor = StyleGuide.parseColor(hexString: colors["error"].string)
-                warningColor = StyleGuide.parseColor(hexString: colors["warning"].string)
-                primaryTextColor = StyleGuide.parseColor(hexString: colors["primaryText"].string)
-                secondaryTextColor = StyleGuide.parseColor(hexString: colors["secondaryText"].string)
-                disabledTextColor = StyleGuide.parseColor(hexString: colors["disabledText"].string)
-                reachGraphColor = StyleGuide.parseColor(hexString: colors["reachGraphColor"].string)
             }
 
             if let fonts: JSON = json["fonts"] {
@@ -248,7 +248,7 @@ public class StyleGuide {
         //if size is not given, return nil
         if let values = string?.components(separatedBy: ","),
             let sizeString = values.first, let fontSize = NumberFormatter().number(from: sizeString) {
-            let size = CGFloat(fontSize)
+            let size = CGFloat(truncating: fontSize)
 
             if let fontName = values.last {
                 return UIFont(name: fontName, size: size)
@@ -297,7 +297,7 @@ public protocol Themeable {
 }
 
 public protocol ThemeValuesType {
-    static func initialize(from: JSON) -> ThemeValuesType
+    static func initialize(fromJSON: JSON) -> ThemeValuesType
 }
 
 

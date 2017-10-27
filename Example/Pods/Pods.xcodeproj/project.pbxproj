@@ -810,9 +810,9 @@
 		766F55F95C5A0A89310AA3DA095848E7 /* StyleGuide */ = {
 			isa = PBXGroup;
 			children = (
+				EA153EB3AC752C7751C46F8BEDFC05B1 /* Extensions.swift */,
 				048CE2035827AA28A1C8607F8264C0DB /* ActivityIndicatorTheme.swift */,
 				4B699EEB576A34DE70A18D70C581AC44 /* ButtonTheme.swift */,
-				EA153EB3AC752C7751C46F8BEDFC05B1 /* Extensions.swift */,
 				D41ED72C705DCF9459937F3F2375DD27 /* SegmentedControlTheme.swift */,
 				8B48D5D4EC28F0304124EE89EB6E1F1F /* SliderTheme.swift */,
 				1A753B95177824F21CC3367A07DFEFCB /* StyleGuide.swift */,

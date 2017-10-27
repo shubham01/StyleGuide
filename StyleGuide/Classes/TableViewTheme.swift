@@ -23,7 +23,9 @@ extension StyleGuide {
 extension UITableView {
     override public func apply(theme: String) {
         if let values: StyleGuide.TableViewTheme = StyleGuide.shared.tableViewTheme[theme] {
-            self.backgroundColor = values.backgroundColor ?? self.backgroundColor
+            
+            self.apply(viewThemeValues: values)
+
             self.separatorColor = values.separatorColor ?? self.separatorColor
         }
     }

@@ -10,6 +10,20 @@ import SwiftyJSON
 
 public class StyleGuide {
 
+    public struct ViewTheme {
+        let backgroundColor: UIColor?
+        let borderWidth: CGFloat?
+        let cornerRadius: CGFloat?
+        let tintColor: UIColor?
+
+        init(fromJSON json: JSON) {
+            self.backgroundColor = StyleGuide.parseColor(hexString: json["backgroundColor"].string)
+            self.borderWidth = StyleGuide.parseFloat(from: json["borderWidth"].int)
+            self.cornerRadius = StyleGuide.parseFloat(from: json["cornerRadius"].int)
+            self.tintColor = StyleGuide.parseColor(hexString: json["tintColor"].string)
+        }
+    }
+
     public struct Theme {
         let backgroundColor: UIColor?
         let textColor: UIColor?

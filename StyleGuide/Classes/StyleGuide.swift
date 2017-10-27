@@ -67,8 +67,8 @@ public class StyleGuide {
     public var viewTheme: [String: ViewTheme] = [:]
     public var textTheme: [String: TextTheme] = [:]
     public var buttonTheme: [String: ButtonTheme] = [:]
+    public var switchTheme: [String: SwitchTheme] = [:]
 
-    public var switchTheme: [String: Theme] = [:]
     public var segmentedControlTheme: [String: Theme] = [:]
     public var sliderTheme: [String: Theme] = [:]
     public var activityIndicatorTheme: [String: Theme] = [:]
@@ -145,7 +145,7 @@ public class StyleGuide {
                 viewTheme[key] = ViewTheme(fromJSON: value)
             })
             json["switch"].dictionary?.forEach({ (key: String, value: JSON) in
-                switchTheme[key] = Theme(from: value)
+                switchTheme[key] = SwitchTheme(fromJSON: value)
             })
             json["segmentedControl"].dictionary?.forEach({ (key: String, value: JSON) in
                 segmentedControlTheme[key] = Theme(from: value)

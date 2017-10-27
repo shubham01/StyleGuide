@@ -81,16 +81,6 @@ extension UISegmentedControl {
     }
 }
 
-extension UISwitch {
-    override public func apply(theme: String) {
-        if let values: StyleGuide.Theme = StyleGuide.shared.switchTheme[theme] {
-            self.tintColor = values.tintColor ?? self.tintColor
-            self.thumbTintColor = values.thumbTintColor ?? self.thumbTintColor
-            self.onTintColor = values.onTintColor ?? self.onTintColor
-        }
-    }
-}
-
 extension UISlider {
     override public func apply(theme: String) {
         if let values: StyleGuide.Theme = StyleGuide.shared.sliderTheme[theme] {

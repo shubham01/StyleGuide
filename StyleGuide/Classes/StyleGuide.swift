@@ -13,6 +13,7 @@ public class StyleGuide {
     public struct ViewTheme {
         let backgroundColor: UIColor?
         let borderWidth: CGFloat?
+        let borderColor: UIColor?
         let cornerRadius: CGFloat?
         let tintColor: UIColor?
 
@@ -21,6 +22,7 @@ public class StyleGuide {
             self.borderWidth = StyleGuide.parseFloat(from: json["borderWidth"].int)
             self.cornerRadius = StyleGuide.parseFloat(from: json["cornerRadius"].int)
             self.tintColor = StyleGuide.parseColor(hexString: json["tintColor"].string)
+            self.borderColor = StyleGuide.parseColor(hexString: json["borderColor"].string)
         }
     }
 
@@ -78,9 +80,9 @@ public class StyleGuide {
 
     public static let defaultThemeKey: String = "default"
 
+    public var viewTheme: [String: ViewTheme] = [:]
     public var textTheme: [String: Theme] = [:]
     public var buttonTheme: [String: Theme] = [:]
-    public var viewTheme: [String: Theme] = [:]
     public var switchTheme: [String: Theme] = [:]
     public var segmentedControlTheme: [String: Theme] = [:]
     public var sliderTheme: [String: Theme] = [:]
@@ -155,7 +157,7 @@ public class StyleGuide {
                 buttonTheme[key] = Theme(from: value)
             })
             json["view"].dictionary?.forEach({ (key: String, value: JSON) in
-                viewTheme[key] = Theme(from: value)
+                viewTheme[key] = ViewTheme(fromJSON: value)
             })
             json["switch"].dictionary?.forEach({ (key: String, value: JSON) in
                 switchTheme[key] = Theme(from: value)

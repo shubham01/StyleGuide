@@ -11,8 +11,12 @@ import SwiftyJSON
 
 extension UIView {
     @objc public func apply(theme: String) {
-        if let values: StyleGuide.Theme = StyleGuide.shared.viewTheme[theme] {
+        if let values: StyleGuide.ViewTheme = StyleGuide.shared.viewTheme[theme] {
             self.backgroundColor = values.backgroundColor ?? self.backgroundColor
+            self.viewBorderWidth = values.borderWidth ?? self.viewBorderWidth
+            self.viewCornerRadius = values.cornerRadius ?? self.viewCornerRadius
+            self.viewBorderColor = values.borderColor ?? self.viewBorderColor
+            self.tintColor = values.tintColor ?? self.tintColor
         }
     }
     @IBInspectable public var themeStyle: String {

@@ -34,22 +34,6 @@ extension UIView {
     }
 }
 
-extension UILabel {
-
-    public override func apply(theme: String) {
-        if let values: StyleGuide.TextTheme = StyleGuide.shared.textTheme[theme] {
-            self.apply(textThemeValues: values)
-        }
-    }
-
-    public func apply(textThemeValues values: StyleGuide.TextTheme) {
-        self.apply(viewThemeValues: values)
-
-        self.textColor = values.textColor ?? self.textColor
-        self.font = values.font ?? self.font
-    }
-}
-
 extension UIButton {
     override public func apply(theme: String) {
         if let values: StyleGuide.ButtonTheme = StyleGuide.shared.buttonTheme[theme] {
@@ -127,21 +111,6 @@ extension UISegmentedControl {
     }
 }
 
-extension UITextView {
-    override public func apply(theme: String) {
-        if let values: StyleGuide.TextTheme = StyleGuide.shared.textTheme[theme] {
-            self.apply(textThemeValues: values)
-        }
-    }
-
-    public func apply(textThemeValues values: StyleGuide.TextTheme) {
-        self.apply(viewThemeValues: values)
-
-        self.font = values.font ?? self.font
-        self.textColor = values.textColor ?? self.textColor
-    }
-}
-
 extension UISwitch {
     override public func apply(theme: String) {
         if let values: StyleGuide.Theme = StyleGuide.shared.switchTheme[theme] {
@@ -176,22 +145,6 @@ extension UIProgressView {
             self.progressTintColor = values.tintColor ?? self.tintColor
             self.trackTintColor = values.alternateTintColor ?? self.trackTintColor
         }
-    }
-}
-
-extension UITextField {
-    override public func apply(theme: String) {
-        if let values: StyleGuide.TextTheme = StyleGuide.shared.textTheme[theme] {
-
-            self.apply(textThemeValues: values)
-        }
-    }
-
-    public func apply(textThemeValues values: StyleGuide.TextTheme) {
-        self.apply(viewThemeValues: values)
-
-        self.textColor = values.textColor ?? self.textColor
-        self.font = values.font ?? self.font
     }
 }
 

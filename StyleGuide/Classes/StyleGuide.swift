@@ -26,20 +26,6 @@ public class StyleGuide {
         }
     }
 
-    public class TextTheme: ViewTheme {
-
-        let textColor: UIColor?
-        let font: UIFont?
-
-        override init(fromJSON json: JSON) {
-
-            self.textColor = StyleGuide.parseColor(hexString: json["textColor"].string)
-            self.font = StyleGuide.parseFont(from: json["font"].string)
-
-            super.init(fromJSON: json)
-        }
-    }
-
     public class ButtonTheme: ViewTheme {
 
         let textColor: UIColor?
@@ -118,6 +104,7 @@ public class StyleGuide {
     public var viewTheme: [String: ViewTheme] = [:]
     public var textTheme: [String: TextTheme] = [:]
     public var buttonTheme: [String: ButtonTheme] = [:]
+
     public var switchTheme: [String: Theme] = [:]
     public var segmentedControlTheme: [String: Theme] = [:]
     public var sliderTheme: [String: Theme] = [:]
@@ -394,3 +381,5 @@ public protocol Themeable {
 public protocol ThemeValuesType {
     static func initialize(from: JSON) -> ThemeValuesType
 }
+
+

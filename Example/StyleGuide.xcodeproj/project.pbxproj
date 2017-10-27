@@ -30,8 +30,8 @@
 /* Begin PBXFileReference section */
 		03EA529BE73522D27F9A9AC9 /* Pods_StyleGuide_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleGuide_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EAF77E99C15B0CA26F4067 /* Pods_StyleGuide_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleGuide_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A29FCCD98D5DE4DF0EAE0D2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		5E9888CA2B15CDF2C5AD6787 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4A29FCCD98D5DE4DF0EAE0D2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5E9888CA2B15CDF2C5AD6787 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		603418A9E6AA20DA816A986E /* Pods-StyleGuide_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleGuide_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleGuide_Example/Pods-StyleGuide_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* StyleGuide_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleGuide_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		65CCD1DDCE5ED718A4A38969 /* Pods-StyleGuide_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleGuide_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleGuide_Tests/Pods-StyleGuide_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		90F46FCBD7A1E88ECA57F68D /* Pods-StyleGuide_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleGuide_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StyleGuide_Example/Pods-StyleGuide_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9BD28058FE854D6361A0F6C1 /* StyleGuide.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = StyleGuide.podspec; path = ../StyleGuide.podspec; sourceTree = "<group>"; };
+		9BD28058FE854D6361A0F6C1 /* StyleGuide.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StyleGuide.podspec; path = ../StyleGuide.podspec; sourceTree = "<group>"; };
 		F67F1BC153B46CE1FA9DEC85 /* Pods-StyleGuide_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleGuide_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleGuide_Tests/Pods-StyleGuide_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +215,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = HKUMAKUTS4;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -528,6 +529,7 @@
 			baseConfigurationReference = 90F46FCBD7A1E88ECA57F68D /* Pods-StyleGuide_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HKUMAKUTS4;
 				INFOPLIST_FILE = StyleGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -543,6 +545,7 @@
 			baseConfigurationReference = 603418A9E6AA20DA816A986E /* Pods-StyleGuide_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HKUMAKUTS4;
 				INFOPLIST_FILE = StyleGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

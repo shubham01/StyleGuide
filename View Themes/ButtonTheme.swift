@@ -67,12 +67,12 @@ extension StyleGuide {
         let font: UIFont?
 
         override init(fromJSON json: JSON) {
-            self.textColor = StyleGuide.parseColor(hexString: json["textColor"].string)
-            self.textColorPressed = StyleGuide.parseColor(hexString: json["textColorPressed"].string)
-            self.textColorDisabled = StyleGuide.parseColor(hexString: json["textColorDisabled"].string)
+            self.textColor = StyleGuide.getColor(forString: json["textColor"].string)
+            self.textColorPressed = StyleGuide.getColor(forString: json["textColorPressed"].string)
+            self.textColorDisabled = StyleGuide.getColor(forString: json["textColorDisabled"].string)
             self.font = StyleGuide.parseFont(from: json["font"].string)
-            backgroundColorPressed = StyleGuide.parseColor(hexString: json["backgroundColorPressed"].string)
-            backgroundColorDisabled = StyleGuide.parseColor(hexString: json["backgroundColorDisabled"].string)
+            backgroundColorPressed = StyleGuide.getColor(forString: json["backgroundColorPressed"].string)
+            backgroundColorDisabled = StyleGuide.getColor(forString: json["backgroundColorDisabled"].string)
 
             super.init(fromJSON: json)
         }

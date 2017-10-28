@@ -235,16 +235,8 @@ public class StyleGuide {
         return nil
     }
 
-    /**
-     Parse color in hex string format to UIColor
-     - parameter hexString: The color hex code in format #RRGGBB or #AARRGGBB
-     - returns: UIColor? if hexString is not nil, returns nil otherwise
-     */
-    public class func parseColor(hexString: String?) -> UIColor? {
-        guard let string = hexString else {
-            return nil
-        }
-        return UIColor(hexString: string)
+    public class func getColor(forString string: String?) -> UIColor? {
+        return StyleGuide.shared.color[string]
     }
 
     /**

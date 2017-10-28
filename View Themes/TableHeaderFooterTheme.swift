@@ -15,7 +15,7 @@ extension StyleGuide {
 
         override init(fromJSON json: JSON) {
 
-            self.textColor = StyleGuide.parseColor(hexString: json["textColor"].string)
+            self.textColor = StyleGuide.getColor(forString: json["textColor"].string)
             self.font = StyleGuide.parseFont(from: json["font"].string)
 
             super.init(fromJSON: json)

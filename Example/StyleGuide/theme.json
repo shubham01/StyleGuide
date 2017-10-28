@@ -1,16 +1,23 @@
 {
+    "colors": {
+        "accent": "#d152ed",
+        "primary": "#12B7E0",
+        "primaryBorder": "#1290c0",
+        "captionColor": "#525252"
+    },
+
     "view": {
         "roundBlue": {
-            "backgroundColor": "#12B7E0",
+            "backgroundColor": "@primary",
             "cornerRadius": 5,
             "borderWidth": 2,
-            "borderColor": "#92B7E0"
+            "borderColor": "@primaryBorder"
         }
     },
 
     "text": {
         "caption": {
-            "textColor": "#565656",
+            "textColor": "@captionColor",
             "font": "13"
         }
     },
@@ -18,8 +25,8 @@
     "button": {
         "solidBlue": {
             "textColor": "#ffffff",
-            "backgroundColor": "#52B7E0",
-            "borderColor": "#12B7E0",
+            "backgroundColor": "@primary",
+            "borderColor": "@primaryBorder",
             "cornerRadius": 10,
             "borderWidth": 4,
             "backgroundColorPressed": "#8052B7E0"

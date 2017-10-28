@@ -14,8 +14,8 @@ extension StyleGuide {
         let thumbTintColor: UIColor?
 
         override init(fromJSON json: JSON) {
-            self.thumbTintColor = StyleGuide.parseColor(hexString: json["thumbTintColor"].string)
-            self.alternateTintColor = StyleGuide.parseColor(hexString: json["alternateTintColor"].string)
+            self.thumbTintColor = StyleGuide.getColor(forString: json["thumbTintColor"].string)
+            self.alternateTintColor = StyleGuide.getColor(forString: json["alternateTintColor"].string)
 
             super.init(fromJSON: json)
         }

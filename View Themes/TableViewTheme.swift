@@ -13,7 +13,7 @@ extension StyleGuide {
         let separatorColor: UIColor?
 
         override init(fromJSON json: JSON) {
-            self.separatorColor = StyleGuide.parseColor(hexString: json["seperatorColor"].string)
+            self.separatorColor = StyleGuide.getColor(forString: json["seperatorColor"].string)
 
             super.init(fromJSON: json)
         }

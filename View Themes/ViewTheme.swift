@@ -18,11 +18,11 @@ extension StyleGuide {
         let tintColor: UIColor?
 
         init(fromJSON json: JSON) {
-            self.backgroundColor = StyleGuide.parseColor(hexString: json["backgroundColor"].string)
+            self.backgroundColor = StyleGuide.getColor(forString: json["backgroundColor"].string)
             self.borderWidth = StyleGuide.parseFloat(from: json["borderWidth"].int)
             self.cornerRadius = StyleGuide.parseFloat(from: json["cornerRadius"].int)
-            self.tintColor = StyleGuide.parseColor(hexString: json["tintColor"].string)
-            self.borderColor = StyleGuide.parseColor(hexString: json["borderColor"].string)
+            self.tintColor = StyleGuide.getColor(forString: json["tintColor"].string)
+            self.borderColor = StyleGuide.getColor(forString: json["borderColor"].string)
         }
     }
 }

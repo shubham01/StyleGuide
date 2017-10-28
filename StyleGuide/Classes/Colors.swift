@@ -23,7 +23,12 @@ extension StyleGuide {
             self.colors = colors
         }
 
-        subscript(colorName: String) -> UIColor? {
+        subscript(colorName: String?) -> UIColor? {
+
+            guard let colorName = colorName else {
+                return nil
+            }
+
             //if the color is named, return the stored value otherwise parse hex value of color
             if let varName = Utils.parseVariableName(fromString: colorName) {
                 return self.colors[varName]

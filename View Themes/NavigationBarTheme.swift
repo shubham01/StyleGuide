@@ -17,9 +17,9 @@ extension StyleGuide {
         let font: UIFont?
 
         override init(fromJSON json: JSON) {
-            self.barTintColor = StyleGuide.parseColor(hexString: json["barTintColor"].string)
+            self.barTintColor = StyleGuide.getColor(forString: json["barTintColor"].string)
             self.hideBottomLine = json["hideBottomLine"].boolValue
-            self.textColor = StyleGuide.parseColor(hexString: json["textColor"].string)
+            self.textColor = StyleGuide.getColor(forString: json["textColor"].string)
             self.font = StyleGuide.parseFont(from: json["font"].string)
 
             super.init(fromJSON: json)

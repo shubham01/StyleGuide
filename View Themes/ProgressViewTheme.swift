@@ -13,7 +13,7 @@ extension StyleGuide {
         let alternateTintColor: UIColor?
 
         override init(fromJSON json: JSON) {
-            self.alternateTintColor = StyleGuide.parseColor(hexString: json["alternateTintColor"].string)
+            self.alternateTintColor = StyleGuide.getColor(forString: json["alternateTintColor"].string)
 
             super.init(fromJSON: json)
         }

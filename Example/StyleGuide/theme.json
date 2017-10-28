@@ -6,6 +6,10 @@
         "captionColor": "#525252"
     },
 
+    "fonts": {
+        "caption": "size:13"
+    },
+
     "view": {
         "roundBlue": {
             "backgroundColor": "@primary",
@@ -18,7 +22,7 @@
     "text": {
         "caption": {
             "textColor": "@captionColor",
-            "font": "size:24"
+            "font": "@caption"
         }
     },
 

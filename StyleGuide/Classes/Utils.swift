@@ -9,7 +9,7 @@ import Foundation
 import SwiftyJSON
 
 public class Utils {
-    class func getVariableName(fromString string: String) -> String? {
+    class func parseVariableName(fromString string: String) -> String? {
         let string = string.trimmingCharacters(in: .whitespaces)
         if string.first == "@" {
             let fromIndex = string.index(string.startIndex, offsetBy: 1)

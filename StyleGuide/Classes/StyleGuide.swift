@@ -20,6 +20,8 @@ public class StyleGuide {
 
     public static let defaultThemeKey: String = "default"
 
+    public var color: Colors!
+
     public var viewTheme: [String: ViewTheme] = [:]
     public var textTheme: [String: TextTheme] = [:]
     public var buttonTheme: [String: ButtonTheme] = [:]
@@ -38,19 +40,6 @@ public class StyleGuide {
     public var searchBarTheme: [String: SearchBarTheme] = [:]
     public var tabBarTheme: [String: TabBarTheme] = [:]
     public var tableHeaderFooterTheme: [String: TableHeaderFooterTheme] = [:]
-
-    public var primaryColor: UIColor?
-    public var accentColor: UIColor?
-    public var secondaryColor: UIColor?
-    public var messageColor: UIColor?
-    public var backgroundColor: UIColor?
-    public var successColor: UIColor?
-    public var errorColor: UIColor?
-    public var warningColor: UIColor?
-    public var primaryTextColor: UIColor?
-    public var secondaryTextColor: UIColor?
-    public var disabledTextColor: UIColor?
-    public var reachGraphColor: UIColor?
 
     public var fontHeadlineBold: UIFont?
     public var fontHeadline: UIFont?
@@ -90,20 +79,7 @@ public class StyleGuide {
 
             let json: JSON = JSON(data: jsonData)
 
-            if let colors: JSON = json["colors"] {
-                accentColor = StyleGuide.parseColor(hexString: colors["accent"].string)
-                primaryColor = StyleGuide.parseColor(hexString: colors["primary"].string)
-                secondaryColor = StyleGuide.parseColor(hexString: colors["secondary"].string)
-                messageColor = StyleGuide.parseColor(hexString: colors["message"].string)
-                backgroundColor = StyleGuide.parseColor(hexString: colors["background"].string)
-                successColor = StyleGuide.parseColor(hexString: colors["success"].string)
-                errorColor = StyleGuide.parseColor(hexString: colors["error"].string)
-                warningColor = StyleGuide.parseColor(hexString: colors["warning"].string)
-                primaryTextColor = StyleGuide.parseColor(hexString: colors["primaryText"].string)
-                secondaryTextColor = StyleGuide.parseColor(hexString: colors["secondaryText"].string)
-                disabledTextColor = StyleGuide.parseColor(hexString: colors["disabledText"].string)
-                reachGraphColor = StyleGuide.parseColor(hexString: colors["reachGraphColor"].string)
-            }
+            self.color = Colors(fromJSON: json["colors"])
 
             json["text"].dictionary?.forEach({ (key: String, value: JSON) in
                 textTheme[key] = TextTheme(fromJSON: value)

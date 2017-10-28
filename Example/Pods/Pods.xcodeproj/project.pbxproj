@@ -71,6 +71,7 @@
 		5169B7F81FA3BA080092C190 /* TabBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B7F71FA3BA080092C190 /* TabBarTheme.swift */; };
 		5169B7FA1FA3BA3C0092C190 /* TableHeaderFooterTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B7F91FA3BA3C0092C190 /* TableHeaderFooterTheme.swift */; };
 		5169B7FC1FA3BA580092C190 /* ApplicationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B7FB1FA3BA580092C190 /* ApplicationTheme.swift */; };
+		5169B7FF1FA434B00092C190 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B7FE1FA434B00092C190 /* Colors.swift */; };
 		531C54B1C10BA0F17A2B7D81D02BD390 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 660B3873A5CA70D1E5D0D07795E54883 /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		541FC9BACCF58B8A8BAD302B78021593 /* SegmentedControlTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED72C705DCF9459937F3F2375DD27 /* SegmentedControlTheme.swift */; };
 		54CC2049C937561A469575AF9E6A6FE9 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148531ED579D81EBC090D98393D065F2 /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -263,7 +264,7 @@
 		0238E8DDD013C956F34F7F888D5C77ED /* Expectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expectation.swift; path = Sources/Nimble/Expectation.swift; sourceTree = "<group>"; };
 		026B18C0ACB59A7C756D0E5328086438 /* BeNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeNil.swift; path = Sources/Nimble/Matchers/BeNil.swift; sourceTree = "<group>"; };
 		0481D5BDAC377AF5A7DF88868B82847F /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Sources/Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
-		048CE2035827AA28A1C8607F8264C0DB /* ActivityIndicatorTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityIndicatorTheme.swift; path = StyleGuide/Classes/ActivityIndicatorTheme.swift; sourceTree = "<group>"; };
+		048CE2035827AA28A1C8607F8264C0DB /* ActivityIndicatorTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorTheme.swift; sourceTree = "<group>"; };
 		04E0B16EADF84D582AA75D0CA5CBD592 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0609CB7417D18EEFF51102C2F082EE08 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		060C46DF40F40A5EAF23725133B5999B /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,7 +328,7 @@
 		45C4982AE5EA6D4570E3F7E3CC238B39 /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAnyOf.swift; path = Sources/Nimble/Matchers/SatisfyAnyOf.swift; sourceTree = "<group>"; };
 		46D18D1E8868E67C51BB4E069D5EFC8F /* Nimble-Snapshots-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-Snapshots-prefix.pch"; sourceTree = "<group>"; };
 		497B3B71DBA60883D2C38A50BDEDD916 /* NMBExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NMBExpectation.swift; path = Sources/Nimble/Adapters/NMBExpectation.swift; sourceTree = "<group>"; };
-		4B699EEB576A34DE70A18D70C581AC44 /* ButtonTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonTheme.swift; path = StyleGuide/Classes/ButtonTheme.swift; sourceTree = "<group>"; };
+		4B699EEB576A34DE70A18D70C581AC44 /* ButtonTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonTheme.swift; sourceTree = "<group>"; };
 		4BB7908B06A0B902208739245EAFFD88 /* Behavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Sources/Quick/Behavior.swift; sourceTree = "<group>"; };
 		4CB24C613EB1F35A60F1B4AAFE759D6B /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
 		4D44D5462A2E4BEFDFFB52B9BE4A612B /* QCKDSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QCKDSL.m; path = Sources/QuickObjectiveC/DSL/QCKDSL.m; sourceTree = "<group>"; };
@@ -338,22 +339,23 @@
 		505A0B9A364A01DB9F662BBAF59B5D25 /* QCKDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCKDSL.h; path = Sources/QuickObjectiveC/DSL/QCKDSL.h; sourceTree = "<group>"; };
 		510EBF40ABAB45144E72833647A94269 /* Quick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Quick-dummy.m"; sourceTree = "<group>"; };
 		514FE45E1E4393C537DBAE135796964D /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
-		5169B7E81FA3B89B0092C190 /* NavigationBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBarTheme.swift; path = StyleGuide/Classes/NavigationBarTheme.swift; sourceTree = "<group>"; };
-		5169B7EB1FA3B8E30092C190 /* RefreshControlTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RefreshControlTheme.swift; path = StyleGuide/Classes/RefreshControlTheme.swift; sourceTree = "<group>"; };
-		5169B7ED1FA3B9280092C190 /* ImageViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageViewTheme.swift; path = StyleGuide/Classes/ImageViewTheme.swift; sourceTree = "<group>"; };
-		5169B7EF1FA3B9620092C190 /* ToolBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToolBarTheme.swift; path = StyleGuide/Classes/ToolBarTheme.swift; sourceTree = "<group>"; };
-		5169B7F11FA3B9B00092C190 /* TableViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewTheme.swift; path = StyleGuide/Classes/TableViewTheme.swift; sourceTree = "<group>"; };
-		5169B7F31FA3B9CF0092C190 /* BarButtonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarButtonTheme.swift; path = StyleGuide/Classes/BarButtonTheme.swift; sourceTree = "<group>"; };
-		5169B7F51FA3B9E80092C190 /* SearchBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchBarTheme.swift; path = StyleGuide/Classes/SearchBarTheme.swift; sourceTree = "<group>"; };
-		5169B7F71FA3BA080092C190 /* TabBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarTheme.swift; path = StyleGuide/Classes/TabBarTheme.swift; sourceTree = "<group>"; };
-		5169B7F91FA3BA3C0092C190 /* TableHeaderFooterTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableHeaderFooterTheme.swift; path = StyleGuide/Classes/TableHeaderFooterTheme.swift; sourceTree = "<group>"; };
-		5169B7FB1FA3BA580092C190 /* ApplicationTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApplicationTheme.swift; path = StyleGuide/Classes/ApplicationTheme.swift; sourceTree = "<group>"; };
+		5169B7E81FA3B89B0092C190 /* NavigationBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTheme.swift; sourceTree = "<group>"; };
+		5169B7EB1FA3B8E30092C190 /* RefreshControlTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControlTheme.swift; sourceTree = "<group>"; };
+		5169B7ED1FA3B9280092C190 /* ImageViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewTheme.swift; sourceTree = "<group>"; };
+		5169B7EF1FA3B9620092C190 /* ToolBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarTheme.swift; sourceTree = "<group>"; };
+		5169B7F11FA3B9B00092C190 /* TableViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTheme.swift; sourceTree = "<group>"; };
+		5169B7F31FA3B9CF0092C190 /* BarButtonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonTheme.swift; sourceTree = "<group>"; };
+		5169B7F51FA3B9E80092C190 /* SearchBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTheme.swift; sourceTree = "<group>"; };
+		5169B7F71FA3BA080092C190 /* TabBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTheme.swift; sourceTree = "<group>"; };
+		5169B7F91FA3BA3C0092C190 /* TableHeaderFooterTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderFooterTheme.swift; sourceTree = "<group>"; };
+		5169B7FB1FA3BA580092C190 /* ApplicationTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTheme.swift; sourceTree = "<group>"; };
+		5169B7FE1FA434B00092C190 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = StyleGuide/Classes/Colors.swift; sourceTree = "<group>"; };
 		54E4115E83E0AB5EF59F52B219E848E3 /* CwlPreconditionTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlPreconditionTesting.h; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h; sourceTree = "<group>"; };
 		550FD31501B5B499C497B70AB881D4D4 /* NMBStringify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBStringify.m; path = Sources/NimbleObjectiveC/NMBStringify.m; sourceTree = "<group>"; };
 		553C722860B05F69945A548E4CFC149E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55DF8FBA2115D616ABFEEE49B1056437 /* ExpectationMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpectationMessage.swift; path = Sources/Nimble/ExpectationMessage.swift; sourceTree = "<group>"; };
 		565AD342A0949D5D8368E07BB349C647 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56931BD0D97650A4F8EA6F829C872B51 /* ViewTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewTheme.swift; path = StyleGuide/Classes/ViewTheme.swift; sourceTree = "<group>"; };
+		56931BD0D97650A4F8EA6F829C872B51 /* ViewTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewTheme.swift; sourceTree = "<group>"; };
 		58C11D95CC4E4176BA0EC07A3DDBB351 /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Sources/Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
 		591AB1D857E7EF369A44FFFD133E3881 /* Pods-StyleGuide_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StyleGuide_Example-umbrella.h"; sourceTree = "<group>"; };
 		5D12B595754FEF4D40710E0ED1D92A8D /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
@@ -391,7 +393,7 @@
 		86A3B0C5E1EFD078D2782F284515AAAB /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8798C9EA475B50C768A001A917D9B674 /* NBSMockedApplication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBSMockedApplication.m; path = DynamicType/NBSMockedApplication.m; sourceTree = "<group>"; };
 		89C2268B24E018B06948CB6B2C544A96 /* Stringers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stringers.swift; path = Sources/Nimble/Utils/Stringers.swift; sourceTree = "<group>"; };
-		8B48D5D4EC28F0304124EE89EB6E1F1F /* SliderTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderTheme.swift; path = StyleGuide/Classes/SliderTheme.swift; sourceTree = "<group>"; };
+		8B48D5D4EC28F0304124EE89EB6E1F1F /* SliderTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SliderTheme.swift; sourceTree = "<group>"; };
 		8CAA403AF7C8DE651B4904A8DB5B3816 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		8EE054FBD693881A8DFBAD5DC39C4108 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/QuickObjectiveC/World.h; sourceTree = "<group>"; };
 		8F0A2A12A4B58823077899F7209A3329 /* XCTestObservationCenter+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+Register.m"; path = "Sources/NimbleObjectiveC/XCTestObservationCenter+Register.m"; sourceTree = "<group>"; };
@@ -404,7 +406,7 @@
 		95299789E5ED93A5BCC8C2B8EFC9BC1C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96A5BA5D1AFD29665E4F5F47AB1D3BAD /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Sources/Quick/Example.swift; sourceTree = "<group>"; };
 		9778218E6B4381A35EB866C8F935CF56 /* CwlDarwinDefinitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDarwinDefinitions.swift; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlDarwinDefinitions.swift; sourceTree = "<group>"; };
-		98B36F2433E8DA4A01E1A4914295595E /* ProgressViewTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressViewTheme.swift; path = StyleGuide/Classes/ProgressViewTheme.swift; sourceTree = "<group>"; };
+		98B36F2433E8DA4A01E1A4914295595E /* ProgressViewTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProgressViewTheme.swift; sourceTree = "<group>"; };
 		99F61680F0E5BB7CA7479628B394AD1E /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Sources/Nimble/FailureMessage.swift; sourceTree = "<group>"; };
 		99F71A8D8F80D844E45DDB2CAD086F22 /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		9A6F6E4958114CE0749708B1D3A98E5C /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Sources/Nimble/Matchers/MatcherFunc.swift; sourceTree = "<group>"; };
@@ -415,7 +417,7 @@
 		A1929F984630339828436805A90591D3 /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
 		A1DEC436D6ADDFC135369A5774EE47D4 /* ExampleGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleGroup.swift; path = Sources/Quick/ExampleGroup.swift; sourceTree = "<group>"; };
 		A36CF9F8F50BAAB05972B6791E6FF73B /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
-		A42C6F555AEB41D647993D7FD0E32025 /* SwitchTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchTheme.swift; path = StyleGuide/Classes/SwitchTheme.swift; sourceTree = "<group>"; };
+		A42C6F555AEB41D647993D7FD0E32025 /* SwitchTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwitchTheme.swift; sourceTree = "<group>"; };
 		A43B3B25F047DEFA78062EE8BE75D236 /* QuickTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTestSuite.swift; path = Sources/Quick/QuickTestSuite.swift; sourceTree = "<group>"; };
 		A5B272C1E4596D706095CC14F89DF7D6 /* QuickSelectedTestSuiteBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickSelectedTestSuiteBuilder.swift; path = Sources/Quick/QuickSelectedTestSuiteBuilder.swift; sourceTree = "<group>"; };
 		A847F32839A97A8DF1F9B29BB480B156 /* Pods-StyleGuide_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StyleGuide_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -439,7 +441,7 @@
 		D033DCFDA82B5B6AEDF2698644365DB9 /* PrettyDynamicTypeSyntax.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrettyDynamicTypeSyntax.swift; path = DynamicType/PrettyDynamicTypeSyntax.swift; sourceTree = "<group>"; };
 		D08784C81E1D1A3964E1001BBF173E6D /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		D3CB77F3A17DD7F00AFB9524CD3676DB /* Pods-StyleGuide_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StyleGuide_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D41ED72C705DCF9459937F3F2375DD27 /* SegmentedControlTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedControlTheme.swift; path = StyleGuide/Classes/SegmentedControlTheme.swift; sourceTree = "<group>"; };
+		D41ED72C705DCF9459937F3F2375DD27 /* SegmentedControlTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SegmentedControlTheme.swift; sourceTree = "<group>"; };
 		D50184D0B8639BF175D0A69A196A703B /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/NimbleObjectiveC/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		D87F141497622933224C3BB687A4B61D /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9426157C739338915F9A60C74B9182B /* HaveCount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaveCount.swift; path = Sources/Nimble/Matchers/HaveCount.swift; sourceTree = "<group>"; };
@@ -471,7 +473,7 @@
 		F535229EA7B6DC6102ED1A046D972AD6 /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		F850FDAA605C6334219119EAE2032DF3 /* NSBundle+CurrentTestBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSBundle+CurrentTestBundle.swift"; path = "Sources/Quick/NSBundle+CurrentTestBundle.swift"; sourceTree = "<group>"; };
 		FBAEBBE521D76162672BF169D3B054F5 /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Sources/Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
-		FD59BF21FC3FE9D4279D0B33067FEF3C /* TextTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextTheme.swift; path = StyleGuide/Classes/TextTheme.swift; sourceTree = "<group>"; };
+		FD59BF21FC3FE9D4279D0B33067FEF3C /* TextTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextTheme.swift; sourceTree = "<group>"; };
 		FEE0FADD26DEDAE2DE8116BF4608E772 /* CwlMachBadInstructionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlMachBadInstructionHandler.h; path = Sources/Lib/CwlPreconditionTesting/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h; sourceTree = "<group>"; };
 		FF6F5915ED622577C43384093E1A3DD8 /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Sources/NimbleObjectiveC/DSL.m; sourceTree = "<group>"; };
 		FFBE76E98385021FAC9773A6FCA57A6C /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
@@ -700,6 +702,31 @@
 			path = "../Target Support Files/FBSnapshotTestCase";
 			sourceTree = "<group>";
 		};
+		5169B7FD1FA4343F0092C190 /* View Themes */ = {
+			isa = PBXGroup;
+			children = (
+				048CE2035827AA28A1C8607F8264C0DB /* ActivityIndicatorTheme.swift */,
+				4B699EEB576A34DE70A18D70C581AC44 /* ButtonTheme.swift */,
+				D41ED72C705DCF9459937F3F2375DD27 /* SegmentedControlTheme.swift */,
+				8B48D5D4EC28F0304124EE89EB6E1F1F /* SliderTheme.swift */,
+				A42C6F555AEB41D647993D7FD0E32025 /* SwitchTheme.swift */,
+				FD59BF21FC3FE9D4279D0B33067FEF3C /* TextTheme.swift */,
+				98B36F2433E8DA4A01E1A4914295595E /* ProgressViewTheme.swift */,
+				5169B7E81FA3B89B0092C190 /* NavigationBarTheme.swift */,
+				5169B7EB1FA3B8E30092C190 /* RefreshControlTheme.swift */,
+				5169B7FB1FA3BA580092C190 /* ApplicationTheme.swift */,
+				5169B7ED1FA3B9280092C190 /* ImageViewTheme.swift */,
+				5169B7EF1FA3B9620092C190 /* ToolBarTheme.swift */,
+				5169B7F11FA3B9B00092C190 /* TableViewTheme.swift */,
+				5169B7F31FA3B9CF0092C190 /* BarButtonTheme.swift */,
+				5169B7F51FA3B9E80092C190 /* SearchBarTheme.swift */,
+				5169B7F71FA3BA080092C190 /* TabBarTheme.swift */,
+				5169B7F91FA3BA3C0092C190 /* TableHeaderFooterTheme.swift */,
+				56931BD0D97650A4F8EA6F829C872B51 /* ViewTheme.swift */,
+			);
+			path = "View Themes";
+			sourceTree = "<group>";
+		};
 		52E489CD605BBFF9FAAF7FDAEF37F704 /* Nimble */ = {
 			isa = PBXGroup;
 			children = (
@@ -810,26 +837,10 @@
 		766F55F95C5A0A89310AA3DA095848E7 /* StyleGuide */ = {
 			isa = PBXGroup;
 			children = (
+				5169B7FD1FA4343F0092C190 /* View Themes */,
 				EA153EB3AC752C7751C46F8BEDFC05B1 /* Extensions.swift */,
-				048CE2035827AA28A1C8607F8264C0DB /* ActivityIndicatorTheme.swift */,
-				4B699EEB576A34DE70A18D70C581AC44 /* ButtonTheme.swift */,
-				D41ED72C705DCF9459937F3F2375DD27 /* SegmentedControlTheme.swift */,
-				8B48D5D4EC28F0304124EE89EB6E1F1F /* SliderTheme.swift */,
 				1A753B95177824F21CC3367A07DFEFCB /* StyleGuide.swift */,
-				A42C6F555AEB41D647993D7FD0E32025 /* SwitchTheme.swift */,
-				FD59BF21FC3FE9D4279D0B33067FEF3C /* TextTheme.swift */,
-				98B36F2433E8DA4A01E1A4914295595E /* ProgressViewTheme.swift */,
-				5169B7E81FA3B89B0092C190 /* NavigationBarTheme.swift */,
-				5169B7EB1FA3B8E30092C190 /* RefreshControlTheme.swift */,
-				5169B7FB1FA3BA580092C190 /* ApplicationTheme.swift */,
-				5169B7ED1FA3B9280092C190 /* ImageViewTheme.swift */,
-				5169B7EF1FA3B9620092C190 /* ToolBarTheme.swift */,
-				5169B7F11FA3B9B00092C190 /* TableViewTheme.swift */,
-				5169B7F31FA3B9CF0092C190 /* BarButtonTheme.swift */,
-				5169B7F51FA3B9E80092C190 /* SearchBarTheme.swift */,
-				5169B7F71FA3BA080092C190 /* TabBarTheme.swift */,
-				5169B7F91FA3BA3C0092C190 /* TableHeaderFooterTheme.swift */,
-				56931BD0D97650A4F8EA6F829C872B51 /* ViewTheme.swift */,
+				5169B7FE1FA434B00092C190 /* Colors.swift */,
 				FC9B90BE2FFC66B358F4379AFA05DAF9 /* Support Files */,
 			);
 			name = StyleGuide;
@@ -1409,6 +1420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9662161E23525F394CE36F97C020244 /* ActivityIndicatorTheme.swift in Sources */,
+				5169B7FF1FA434B00092C190 /* Colors.swift in Sources */,
 				894EA10246E39CF5A3E6DE53480ACB50 /* ButtonTheme.swift in Sources */,
 				F854CB850267FB9B77EDADA5630A01EA /* Extensions.swift in Sources */,
 				5169B7EA1FA3B8B40092C190 /* NavigationBarTheme.swift in Sources */,

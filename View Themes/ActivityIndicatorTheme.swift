@@ -20,7 +20,6 @@ extension UIActivityIndicatorView {
     override public func apply(theme: String) {
         if let values: StyleGuide.ActivityIndicatorTheme = StyleGuide.shared.activityIndicatorTheme[theme] {
             self.apply(viewThemeValues: values)
-
             self.color = values.tintColor ?? self.color
         }
     }

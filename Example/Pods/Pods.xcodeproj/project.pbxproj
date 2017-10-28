@@ -73,6 +73,7 @@
 		5169B7FC1FA3BA580092C190 /* ApplicationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B7FB1FA3BA580092C190 /* ApplicationTheme.swift */; };
 		5169B7FF1FA434B00092C190 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B7FE1FA434B00092C190 /* Colors.swift */; };
 		5169B8011FA43A9C0092C190 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B8001FA43A9C0092C190 /* Utils.swift */; };
+		5169B8031FA45B300092C190 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B8021FA45B300092C190 /* Fonts.swift */; };
 		531C54B1C10BA0F17A2B7D81D02BD390 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 660B3873A5CA70D1E5D0D07795E54883 /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		541FC9BACCF58B8A8BAD302B78021593 /* SegmentedControlTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED72C705DCF9459937F3F2375DD27 /* SegmentedControlTheme.swift */; };
 		54CC2049C937561A469575AF9E6A6FE9 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148531ED579D81EBC090D98393D065F2 /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -352,6 +353,7 @@
 		5169B7FB1FA3BA580092C190 /* ApplicationTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTheme.swift; sourceTree = "<group>"; };
 		5169B7FE1FA434B00092C190 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = StyleGuide/Classes/Colors.swift; sourceTree = "<group>"; };
 		5169B8001FA43A9C0092C190 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = StyleGuide/Classes/Utils.swift; sourceTree = "<group>"; };
+		5169B8021FA45B300092C190 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = StyleGuide/Classes/Fonts.swift; sourceTree = "<group>"; };
 		54E4115E83E0AB5EF59F52B219E848E3 /* CwlPreconditionTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlPreconditionTesting.h; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/Mach/CwlPreconditionTesting.h; sourceTree = "<group>"; };
 		550FD31501B5B499C497B70AB881D4D4 /* NMBStringify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBStringify.m; path = Sources/NimbleObjectiveC/NMBStringify.m; sourceTree = "<group>"; };
 		553C722860B05F69945A548E4CFC149E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -843,6 +845,7 @@
 				EA153EB3AC752C7751C46F8BEDFC05B1 /* Extensions.swift */,
 				1A753B95177824F21CC3367A07DFEFCB /* StyleGuide.swift */,
 				5169B7FE1FA434B00092C190 /* Colors.swift */,
+				5169B8021FA45B300092C190 /* Fonts.swift */,
 				5169B8001FA43A9C0092C190 /* Utils.swift */,
 				FC9B90BE2FFC66B358F4379AFA05DAF9 /* Support Files */,
 			);
@@ -1412,6 +1415,7 @@
 				A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */,
 				1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */,
 				094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */,
+				5169B8031FA45B300092C190 /* Fonts.swift in Sources */,
 				69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */,
 				35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */,
 				756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */,

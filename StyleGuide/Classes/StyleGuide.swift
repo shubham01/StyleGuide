@@ -21,6 +21,7 @@ public class StyleGuide {
     public static let defaultThemeKey: String = "default"
 
     public var color: Colors!
+    public var fonts: Fonts!
 
     public var viewTheme: [String: ViewTheme] = [:]
     public var textTheme: [String: TextTheme] = [:]
@@ -40,23 +41,6 @@ public class StyleGuide {
     public var searchBarTheme: [String: SearchBarTheme] = [:]
     public var tabBarTheme: [String: TabBarTheme] = [:]
     public var tableHeaderFooterTheme: [String: TableHeaderFooterTheme] = [:]
-
-    public var fontHeadlineBold: UIFont?
-    public var fontHeadline: UIFont?
-    public var fontHeadingSpecial: UIFont?
-    public var fontBodySpecial: UIFont?
-    public var fontHeading1: UIFont?
-    public var fontHeading2: UIFont?
-    public var fontHeading3: UIFont?
-    public var fontHeading4: UIFont?
-    public var fontHeading5: UIFont?
-    public var fontHeading6: UIFont?
-    public var fontBody1: UIFont?
-    public var fontBody2: UIFont?
-    public var fontBody3: UIFont?
-    public var fontBody4: UIFont?
-    public var fontBody5: UIFont?
-    public var fontBody6: UIFont?
 
     private var windowObserver: NSObjectProtocol?
 
@@ -79,7 +63,9 @@ public class StyleGuide {
 
             let json: JSON = JSON(data: jsonData)
 
+            //colors and fonts are to be parsed before everything else
             self.color = Colors(fromJSON: json["colors"])
+            self.fonts = Fonts(fromJSON: json["fonts"])
 
             json["text"].dictionary?.forEach({ (key: String, value: JSON) in
                 textTheme[key] = TextTheme(fromJSON: value)
@@ -136,30 +122,11 @@ public class StyleGuide {
                 tableHeaderFooterTheme[key] = TableHeaderFooterTheme(fromJSON: value)
             })
 
-            //Load custom view
+            //Load custom views
             customViews.forEach { (viewKey: String, tuple: CustomViewTuple) in
                 json[viewKey].dictionary?.forEach { (key: String, value: JSON) in
                     tuple.viewType.themeDict[key] = tuple.valuesType.initialize(fromJSON: value)
                 }
-            }
-
-            if let fonts: JSON = json["fonts"] {
-                fontHeadline = StyleGuide.parseFont(from: fonts["headline"].string)
-                fontHeadlineBold = StyleGuide.parseFont(from: fonts["headlineBold"].string)
-                fontHeadingSpecial = StyleGuide.parseFont(from: fonts["headingSpecial"].string)
-                fontBodySpecial = StyleGuide.parseFont(from: fonts["bodySpecial"].string)
-                fontHeading1 = StyleGuide.parseFont(from: fonts["heading1"].string)
-                fontHeading2 = StyleGuide.parseFont(from: fonts["heading2"].string)
-                fontHeading3 = StyleGuide.parseFont(from: fonts["heading3"].string)
-                fontHeading4 = StyleGuide.parseFont(from: fonts["heading4"].string)
-                fontHeading5 = StyleGuide.parseFont(from: fonts["heading5"].string)
-                fontHeading6 = StyleGuide.parseFont(from: fonts["heading6"].string)
-                fontBody1 = StyleGuide.parseFont(from: fonts["body1"].string)
-                fontBody2 = StyleGuide.parseFont(from: fonts["body2"].string)
-                fontBody3 = StyleGuide.parseFont(from: fonts["body3"].string)
-                fontBody4 = StyleGuide.parseFont(from: fonts["body4"].string)
-                fontBody5 = StyleGuide.parseFont(from: fonts["body5"].string)
-                fontBody6 = StyleGuide.parseFont(from: fonts["body6"].string)
             }
         }
     }
@@ -221,18 +188,21 @@ public class StyleGuide {
      - returns: UIFont object if successful, nil otherwise. If font name is not specified, system font of asked size is returned.
      */
     public class func parseFont(from string: String?) -> UIFont? {
-        //if size is not given, return nil
-        if let values = string?.components(separatedBy: ","),
-            let sizeString = values.first, let fontSize = NumberFormatter().number(from: sizeString) {
-            let size = CGFloat(truncating: fontSize)
 
-            if let fontName = values.last {
-                return UIFont(name: fontName, size: size)
-            }
-            //if font name is not specified, return system font with the asked size
-            return UIFont.systemFont(ofSize: size)
-        }
-        return nil
+        return StyleGuide.shared.fonts[string]
+
+        //if size is not given, return nil
+//        if let values = string?.components(separatedBy: ","),
+//            let sizeString = values.first, let fontSize = NumberFormatter().number(from: sizeString) {
+//            let size = CGFloat(truncating: fontSize)
+//
+//            if let fontName = values.last {
+//                return UIFont(name: fontName, size: size)
+//            }
+//            //if font name is not specified, return system font with the asked size
+//            return UIFont.systemFont(ofSize: size)
+//        }
+//        return nil
     }
 
     public class func getColor(forString string: String?) -> UIColor? {

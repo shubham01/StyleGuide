@@ -18,7 +18,7 @@
     "text": {
         "caption": {
             "textColor": "@captionColor",
-            "font": "13"
+            "font": "size:24"
         }
     },
 

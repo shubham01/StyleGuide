@@ -61,7 +61,6 @@
 		50EEB30BED91D8E6C6C384721894C3E8 /* ErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D5FDD780F23971EDCBBB3655C4A23 /* ErrorUtility.swift */; };
 		5169B7FF1FA434B00092C190 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B7FE1FA434B00092C190 /* Colors.swift */; };
 		5169B8011FA43A9C0092C190 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B8001FA43A9C0092C190 /* Utils.swift */; };
-		5169B8031FA45B300092C190 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B8021FA45B300092C190 /* Fonts.swift */; };
 		5169B8281FA45E060092C190 /* ActivityIndicatorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B8051FA45DE60092C190 /* ActivityIndicatorTheme.swift */; };
 		5169B8291FA45E060092C190 /* ApplicationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B80F1FA45DE70092C190 /* ApplicationTheme.swift */; };
 		5169B82A1FA45E060092C190 /* BarButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B8061FA45DE60092C190 /* BarButtonTheme.swift */; };
@@ -80,6 +79,7 @@
 		5169B8371FA45E060092C190 /* TextTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B8081FA45DE60092C190 /* TextTheme.swift */; };
 		5169B8381FA45E060092C190 /* ToolBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B8091FA45DE60092C190 /* ToolBarTheme.swift */; };
 		5169B8391FA45E060092C190 /* ViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B80D1FA45DE70092C190 /* ViewTheme.swift */; };
+		5169B83B1FA45E820092C190 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169B8021FA45B300092C190 /* Fonts.swift */; };
 		531C54B1C10BA0F17A2B7D81D02BD390 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 660B3873A5CA70D1E5D0D07795E54883 /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54CC2049C937561A469575AF9E6A6FE9 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148531ED579D81EBC090D98393D065F2 /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		57DCAEF2887AF704DB8C042224AD3AC5 /* Pods-StyleGuide_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 591AB1D857E7EF369A44FFFD133E3881 /* Pods-StyleGuide_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1415,7 +1415,6 @@
 				A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */,
 				1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */,
 				094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */,
-				5169B8031FA45B300092C190 /* Fonts.swift in Sources */,
 				69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */,
 				35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */,
 				756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */,
@@ -1442,6 +1441,7 @@
 				5169B82F1FA45E060092C190 /* RefreshControlTheme.swift in Sources */,
 				5CE364D02848148D29BDA089989D96E0 /* StyleGuide-dummy.m in Sources */,
 				5169B82B1FA45E060092C190 /* ButtonTheme.swift in Sources */,
+				5169B83B1FA45E820092C190 /* Fonts.swift in Sources */,
 				5169B8311FA45E060092C190 /* SegmentedControlTheme.swift in Sources */,
 				FBE2F17593C725809CE4AED82D134D14 /* StyleGuide.swift in Sources */,
 				5169B8361FA45E060092C190 /* TableViewTheme.swift in Sources */,

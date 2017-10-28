@@ -187,22 +187,8 @@ public class StyleGuide {
      - parameter from: The input font string in format -> "size,fontName"
      - returns: UIFont object if successful, nil otherwise. If font name is not specified, system font of asked size is returned.
      */
-    public class func parseFont(from string: String?) -> UIFont? {
-
+    public class func getFont(fromString string: String?) -> UIFont? {
         return StyleGuide.shared.fonts[string]
-
-        //if size is not given, return nil
-//        if let values = string?.components(separatedBy: ","),
-//            let sizeString = values.first, let fontSize = NumberFormatter().number(from: sizeString) {
-//            let size = CGFloat(truncating: fontSize)
-//
-//            if let fontName = values.last {
-//                return UIFont(name: fontName, size: size)
-//            }
-//            //if font name is not specified, return system font with the asked size
-//            return UIFont.systemFont(ofSize: size)
-//        }
-//        return nil
     }
 
     public class func getColor(forString string: String?) -> UIColor? {

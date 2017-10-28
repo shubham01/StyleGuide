@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-public class Utils {
+class Utils {
     class func parseVariableName(fromString string: String) -> String? {
         let string = string.trimmingCharacters(in: .whitespaces)
         if string.first == "@" {
@@ -23,7 +23,7 @@ public class Utils {
      - parameter from: The input font string in format -> "size,fontName"
      - returns: UIFont object if successful, nil otherwise. If font name is not specified, system font of asked size is returned.
      */
-    public class func parseFont(from string: String?) -> UIFont? {
+    class func parseFont(from string: String?) -> UIFont? {
 
         guard let values = string?.components(separatedBy: ","), values.count > 0 else {
             return nil

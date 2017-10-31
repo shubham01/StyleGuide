@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StyleGuide'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'The theming library for your amazing iOS app!'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ The aim is to keep the app ui consistent, changeable from a single place and to 
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'shubham01' => 'shubham.agr001@gmail.com' }
-  s.source           = { :git => 'https://github.com/shubham01/StyleGuide.git', :branch => s.version.to_s }
+  s.source           = { :git => 'https://github.com/shubham01/StyleGuide.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'

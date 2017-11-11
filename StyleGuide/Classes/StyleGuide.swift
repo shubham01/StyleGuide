@@ -161,6 +161,7 @@ public class StyleGuide {
         UIRefreshControl.appearance().apply(theme: StyleGuide.defaultThemeKey)
         UISearchBar.appearance().apply(theme: StyleGuide.defaultThemeKey)
         UITabBar.appearance().apply(theme: StyleGuide.defaultThemeKey)
+        UIImageView.appearance().apply(theme: StyleGuide.defaultThemeKey)
 
         //Set tab bar item appearance
         if let font = tabBarTheme[StyleGuide.defaultThemeKey]?.font {

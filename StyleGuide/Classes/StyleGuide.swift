@@ -61,7 +61,7 @@ public class StyleGuide {
         if let fileURL: URL = Bundle.main.url(forResource: themeFileName, withExtension: "json"),
             let jsonData: Data = try? Data(contentsOf: fileURL) {
 
-            let json: JSON = JSON(data: jsonData)
+            let json: JSON = (try? JSON(data: jsonData)) ?? JSON.null
 
             //colors and fonts are to be parsed before everything else
             self.color = Colors(fromJSON: json["colors"])
